@@ -73,9 +73,10 @@ aside span {
 
 .signup main {
   flex-grow: 1;
+  background-color: #f9fafb;
 }
 
-main div {
+main > div {
   font-size: 1.3rem;
   font-weight: bold;
   padding: 150px 150px 20px 80px;
@@ -87,14 +88,19 @@ div p {
 
 /* Form */
 form {
-  background-color: #ccc;
-  padding: 20px 80px 20px 80px;
-  margin-top: 50px;
+  appearance: none;
+  border: none;
 }
+
+form > div {
+  padding: 20px 80px;
+  background-color: #fff;
+}
+
 form ul {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
 }
 
 form ul li {
@@ -102,7 +108,7 @@ form ul li {
 }
 
 form legend {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -112,6 +118,8 @@ form label {
   display: inline-block;
   font-family: 'Poppins', sans-serif;
   font-size: 0.8rem;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
+  color: #4c5050;
 }
