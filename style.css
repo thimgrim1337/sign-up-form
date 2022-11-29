@@ -11,7 +11,7 @@
 
 body {
   font-size: 10px;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .signup {
@@ -43,6 +43,11 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.logo-wrap img {
+  max-width: 100%;
+  min-width: 20%;
+}
+
 aside * {
   color: white;
 }
@@ -71,11 +76,42 @@ aside span {
 }
 
 main div {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  padding: 150px 80px 20px 80px;
+  padding: 150px 150px 20px 80px;
 }
 
 div p {
   margin-bottom: 20px;
+}
+
+/* Form */
+form {
+  background-color: #ccc;
+  padding: 20px 80px 20px 80px;
+  margin-top: 50px;
+}
+form ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+form ul li {
+  flex-basis: 50%;
+}
+
+form legend {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+form label {
+  width: 100%;
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
