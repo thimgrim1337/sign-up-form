@@ -35,7 +35,13 @@
             <ul>
               <li>
                 <label for="fname">First name</label>
-                <input type="text" name="fname" id="fname" />
+                <input
+                  type="text"
+                  name="fname"
+                  id="fname"
+                  required
+                  minlength="3"
+                />
               </li>
               <li>
                 <label for="lname">Last name</label>
@@ -43,7 +49,7 @@
               </li>
               <li>
                 <label for="email">Email</label>
-                <input type="mail" name="email" id="email" />
+                <input type="email" name="email" id="email" required />
               </li>
               <li>
                 <label for="phone">Phone number</label>
@@ -51,11 +57,28 @@
               </li>
               <li>
                 <label for="pwd">Password</label>
-                <input class="error" type="password" name="pwd" id="pwd" />
+                <input
+                  class="error"
+                  type="password"
+                  name="pwd"
+                  id="pwd"
+                  required
+                  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                  minlength="8"
+                  title="Password should be minimum 8 characters and contain at least 1 number, 1 special character and 1 capital letter"
+                />
+                <span>* Passwords do not match</span>
               </li>
               <li>
                 <label for="cpwd">Confirm password</label>
-                <input class="error" type="password" name="cpwd" id="cpwd" />
+                <input
+                  class="error"
+                  type="password"
+                  name="cpwd"
+                  id="cpwd"
+                  required
+                  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                />
               </li>
             </ul>
           </div>
@@ -67,4 +90,26 @@
       </main>
     </section>
   </body>
+  <script>
+    const form = document.querySelector('.form-inputs');
+    const pwd = document.querySelector('#pwd');
+    const cpwd = document.querySelector('#cpwd');
+    const pwdSpan = document.querySelector('#pwd + span');
+
+    form.addEventListener('mouseover', () => {
+      if (pwd.value === cpwd.value && pwd.value !== '' && cpwd.value !== '') {
+        pwd.classList.remove('error');
+        cpwd.classList.remove('error');
+        pwd.classList.add('correct');
+        cpwd.classList.add('correct');
+        pwdSpan.style.display = 'none';
+      } else {
+        pwd.classList.add('error');
+        cpwd.classList.add('error');
+        pwd.classList.remove('correct');
+        cpwd.classList.remove('correct');
+        pwdSpan.style.display = 'inline-block';
+      }
+    });
+  </script>
 </html>

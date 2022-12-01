@@ -25,6 +25,7 @@ body {
 .signup aside {
   flex-basis: 40%;
   min-width: 40%;
+  min-height: 100vh;
   position: relative;
   background-image: url(bg.jpg);
   background-position-x: 35%;
@@ -102,6 +103,7 @@ form ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  max-width: 600px;
 }
 
 form ul li {
@@ -128,8 +130,6 @@ form label {
 
 input {
   outline: none;
-
-  appearance: none;
   border: 1px solid #e5e7eb;
   padding: 5px;
   border-radius: 5px;
@@ -143,6 +143,17 @@ input:focus {
 input.error {
   border: 1px solid red;
   box-shadow: 0 0px 2px red;
+}
+
+input.correct {
+  border: 1px solid green;
+  box-shadow: 0 0px 2px green;
+}
+
+li span {
+  display: inline-block;
+  width: 100%;
+  color: red;
 }
 
 /* Button */
