@@ -30,7 +30,7 @@
           <span>You know you want to.</span>
         </div>
         <form action="#">
-          <div>
+          <div class="form-inputs">
             <legend>Let's do this!</legend>
             <ul>
               <li>
@@ -51,16 +51,18 @@
               </li>
               <li>
                 <label for="pwd">Password</label>
-                <input type="password" name="pwd" id="pwd" />
+                <input class="error" type="password" name="pwd" id="pwd" />
               </li>
               <li>
                 <label for="cpwd">Confirm password</label>
-                <input type="password" name="cpwd" id="cpwd" />
+                <input class="error" type="password" name="cpwd" id="cpwd" />
               </li>
             </ul>
           </div>
-          <button type="submit">Create Account</button>
-          <span>Already have an account? <a href="#">Log in</a></span>
+          <div class="form-button">
+            <button type="submit">Create Account</button>
+            <span>Already have an account? <a href="#">Log in</a></span>
+          </div>
         </form>
       </main>
     </section>
